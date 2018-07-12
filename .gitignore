@@ -15,3 +15,7 @@ config/*
 !config/user-aliases.ps1
 !config/user-profile.cmd
 !config/user-profile.ps1
+
+!etc/
+etc/*
+!etc/external-terminal.cmd
