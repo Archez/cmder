@@ -10,16 +10,13 @@
     λ <PostPrompt> |
 #>
 
-[ScriptBlock]$PrePrompt = {
-
-}
+[ScriptBlock]$PrePrompt = {}
 
 # Replace the cmder prompt entirely with this.
 # [ScriptBlock]$CmderPrompt = {}
 
-[ScriptBlock]$PostPrompt = {
-
-}
+[ScriptBlock]$PostPrompt = {}
 
 ## <Continue to add your own>
-
+# Set user aliases from file
+. "$env:Cmder_Root\config\user-aliases.ps1"

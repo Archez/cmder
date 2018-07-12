@@ -4,12 +4,21 @@
 ;= rem In batch mode, jump to the end of the file
 ;= goto:eof
 ;= Add aliases below here
-e.=explorer .
-gl=git log --oneline --all --graph --decorate  $*
-ls=ls --show-control-chars -F --color $*
-pwd=cd
 clear=cls
+cmderr=cd /d "%CMDER_ROOT%"
+e.=explorer .
 history=cat "%CMDER_ROOT%\config\.history"
+ls=ls --show-control-chars -F --color $*
+ll=ls -l $*
+pwd=cd
 unalias=alias /d $1
 vi=vim $*
-cmderr=cd /d "%CMDER_ROOT%"
+
+ccode=cd C:\Code
+emunexus=emulator -avd Nexus_5X_API_26 -no-audio $*
+githide=git update-index --assume-unchaged $*
+gitf=git fetch $*
+gitl=git log --oneline --all --graph --decorate  $*
+gitmf=git merge --ff-only $*
+gits=git status $*
+gitunhide=git update-index --no-assume-unchaged $*

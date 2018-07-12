@@ -12,5 +12,6 @@ config/*
 !config/settings
 !config/startup.task
 !config/user-aliases.cmd
+!config/user-aliases.ps1
 !config/user-profile.cmd
 !config/user-profile.ps1
