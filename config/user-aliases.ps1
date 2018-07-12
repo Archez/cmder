@@ -1,25 +1,25 @@
 function global:Invoke-Touch {
     <#
     .SYNOPSIS
-    Change file timestamps.
+        Change file timestamps.
     .DESCRIPTION
-    Update the access and modifcation times of each FILE to the current time.
-    A FILE argument that does not exist is created empty.
+        Update the access and modifcation times of each FILE to the current time.
+        A FILE argument that does not exist is created empty.
     .EXAMPLE
-    Touch-File example.txt
+        Touch-File example.txt
     .PARAMETER File
-    The name of the file to touch.
+        The name of the file to touch.
     #>
-    [CmdletBinding(ConfirmImpact='Low')]
+    [CmdletBinding(ConfirmImpact = 'Low')]
     [Alias('Touch')]
     param (
-        [Parameter(Mandatory, HelpMessage='Enter a file name OR an array/list of file names.')]
+        [Parameter(Mandatory, HelpMessage = 'Enter a file name OR an array/list of file names.')]
         [ValidateNotNullOrEmpty()]
         [string[]] $File
     )
 
     process {
-        foreach($f in $File) {
+        foreach ($f in $File) {
             if (Test-Path $f) {
                 Write-Verbose "Updating $f"
                 Set-ItemProperty -Path $f -Name LastWriteTime -Value (Get-Date)
@@ -33,4 +33,8 @@ function global:Invoke-Touch {
 
 function global:ccode {
     Set-Location -Path 'C:\Code'
+}
+
+function global:cmderr {
+    Set-Location -Path 'C:\cmder'
 }
