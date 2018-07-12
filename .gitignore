@@ -15,6 +15,7 @@ config/*
 !config/user-aliases.ps1
 !config/user-profile.cmd
 !config/user-profile.ps1
+!config/user-profile.sh
 
 !etc/
 etc/*
