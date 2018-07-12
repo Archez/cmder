@@ -3,6 +3,6 @@ $gitPath = 'C:\cmder\vendor\git-for-windows\cmd'
 # Get System Path variable
 $path = [System.Environment]::GetEnvironmentVariable('PATH', 'Machine')
 # Attempt to remove the git path if it already exists
-$path = ($path.Split(';') | Where-Object {$_ -ne $gitPath}) -join ';'
+$path = ($path.Split(';') | Where-Object {$_ -ne $gitPath} | Where-Object {$_ -ne ""}) -join ';'
 # Append the git path to the System
-[System.Environment]::SetEnvironmentVariable('PATH', $path + $gitPath + ';', 'Machine')
+[System.Environment]::SetEnvironmentVariable('PATH', $path + ';' + $gitPath, 'Machine')
