@@ -1,0 +1,16 @@
+/*
+!.gitignore
+!README.md
+
+!bin/
+bin/*
+
+!config/
+config/*
+!config/profile.d/
+!config/system-init.ps1
+!config/settings
+!config/startup.task
+!config/user-aliases.cmd
+!config/user-profile.cmd
+!config/user-profile.ps1
