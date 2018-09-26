@@ -14,7 +14,7 @@ pwd=cd
 unalias=alias /d $1
 vi=vim $*
 
-ccode=cd C:\Code
+ccode=cd c:\code
 emunexus=emulator -avd Nexus_5X_API_26 -no-audio $*
 githide=git update-index --assume-unchanged $*
 gitf=git fetch $*

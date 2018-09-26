@@ -13,6 +13,7 @@ config/*
 !config/startup.task
 !config/user-aliases.cmd
 !config/user-aliases.ps1
+!config/user-aliases.sh
 !config/user-profile.cmd
 !config/user-profile.ps1
 !config/user-profile.sh

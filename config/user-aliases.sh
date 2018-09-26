@@ -1,0 +1,15 @@
+alias ccode="cd /c/code"
+alias cmderr="cd /c/cmder"
+
+alias mkphnx="docker run --name=lv --mount type=bind,source=/c/code,target=/code -d -p 2023:22 -p 8080:80 -p 8081:443 -p 29325:29324 185477066674.dkr.ecr.us-west-1.amazonaws.com/adc-nodejs:1.1"
+alias phnxwatch="docker-volume-watcher lv /c/code"
+# alias phnxwatch="sudo /c/code/notify-forwarder_linux_x64 watch -c 127.0.0.1:29325 /c/code /code"
+alias phnxssh="docker exec -it --user dev lv bash"
+#alias phnxssh="ssh dev@localhost -p2023 -o NoHostAuthenticationForLocalhost=yes"
+
+alias githide="git update-index --assume-unchanged $*"
+alias gitf="git fetch $*"
+alias gitl="git log --oneline --all --graph --decorate  $*"
+alias gitmf="git merge --ff-only $*"
+alias gits="git status $*"
+alias gitunhide="git update-index --no-assume-unchanged $*"
