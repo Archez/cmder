@@ -1,7 +1,4 @@
-# Use this file to run your own startup commands for bash
-
-CMDER_ROOT=/c/cmder
-export CMDER_ROOT
+export CMDER_ROOT=/c/cmder
 
 # Load aliases
 . ${CMDER_ROOT}/config/user-aliases.sh

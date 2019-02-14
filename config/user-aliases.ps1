@@ -122,9 +122,9 @@ function global:Switch-HyperV {
         }
 
         if ($State -ieq 'enable') {
-            Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+            Get-WindowsOptionalFeature -Online -FeatureName *Hyper* | Enable-WindowsOptionalFeature
         } else {
-            Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All
+            Get-WindowsOptionalFeature -Online -FeatureName *Hyper* | Disable-WindowsOptionalFeature
         }
     }
 }

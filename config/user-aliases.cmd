@@ -18,6 +18,7 @@ ccode=cd c:\code
 emunexus=emulator -avd Nexus_5X_API_26 -no-audio $*
 githide=git update-index --assume-unchanged $*
 gitf=git fetch $*
+gitfp=git fetch --prune $*
 gitl=git log --oneline --all --graph --decorate $*
 gitmf=git merge --ff-only $*
 gits=git status $*
