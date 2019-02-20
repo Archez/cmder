@@ -122,10 +122,14 @@ function global:Switch-HyperV {
         }
 
         if ($State -ieq 'enable') {
-            Get-WindowsOptionalFeature -Online -FeatureName *Hyper* | Enable-WindowsOptionalFeature
+            Enable-WindowsOptionalFeature -FeatureName HypervisorPlatform -Online -NoRestart -WarningAction SilentlyContinue | Out-Null
+            Enable-WindowsOptionalFeature -FeatureName Microsoft-Hyper-V-All -Online -NoRestart -WarningAction SilentlyContinue | Out-Null
         } else {
-            Get-WindowsOptionalFeature -Online -FeatureName *Hyper* | Disable-WindowsOptionalFeature
+            Disable-WindowsOptionalFeature -FeatureName HypervisorPlatform -Online -NoRestart -WarningAction SilentlyContinue | Out-Null
+            Disable-WindowsOptionalFeature -FeatureName Microsoft-Hyper-V-All -Online -NoRestart -WarningAction SilentlyContinue | Out-Null
         }
+
+        Restart-Computer -Confirm
     }
 }
 
